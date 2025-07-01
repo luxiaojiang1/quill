@@ -32,6 +32,9 @@ module.exports = (env) =>
       static: {
         directory: resolve(__dirname, './dist'),
       },
+        headers: {
+            'Access-Control-Allow-Origin': '*'
+        },
       hot: false,
       allowedHosts: 'all',
       devMiddleware: {
