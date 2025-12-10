@@ -11,9 +11,6 @@
       "website": "9000"
     }
   },
-  "workspaces": [
-    "packages/*"
-  ],
   "license": "BSD-3-Clause",
   "repository": {
     "type": "git",
@@ -23,13 +20,8 @@
     "url": "https://github.com/slab/quill/issues"
   },
   "scripts": {
-    "build": "run-p build:*",
-    "build:quill": "npm run build -w quill",
-    "build:website": "npm run build -w website",
-    "start": "run-p start:*",
-    "start:quill": "npm start -w quill",
-    "start:website": "NEXT_PUBLIC_LOCAL_QUILL=true npm start -w website",
-    "lint": "npm run lint -ws"
+    "build:quill": "pnpm --filter=quill build",
+    "start:quill": "pnpm --filter=quill start"
   },
   "keywords": [
     "quill",

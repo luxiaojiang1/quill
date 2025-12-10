@@ -6,10 +6,25 @@
   "homepage": "https://quilljs.com",
   "main": "quill.js",
   "type": "module",
+
+  "exports": {
+    ".": {
+      "types": "./dist/types.d.js",
+      "import": "./dist/quill.js"
+    },
+    "./quill.snow.css": "./dist/dist/quill.snow.css",
+    "./quill.core.css": "./dist/dist/quill.core.css"
+  },
+
+  "files": [
+    "dist"
+  ],
+
+
   "dependencies": {
+    "parchment": "workspace:*",
     "eventemitter3": "^5.0.1",
     "lodash-es": "^4.17.21",
-    "parchment": "^3.0.0",
     "quill-delta": "^5.1.0"
   },
   "devDependencies": {
@@ -75,12 +90,11 @@
     "defaults"
   ],
   "scripts": {
-    "build": "./scripts/build production",
-    "build_win": "node ./scripts/build.cjs production",
+    "build": "node ./scripts/build.cjs production",
     "lint": "run-s lint:*",
     "lint:eslint": "eslint .",
     "lint:tsc": "tsc --noEmit --skipLibCheck",
-    "start_win": "webpack-dev-server --port 8080",
+    "start": "webpack-dev-server --port 8080",
     "start_old": "[[ -z \"$npm_package_config_ports_webpack\" ]] && webpack-dev-server || webpack-dev-server --port $npm_package_config_ports_webpack",
     "test": "run-s test:*",
     "test:unit": "vitest --config test/unit/vitest.config.ts",

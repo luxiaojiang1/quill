@@ -8,7 +8,7 @@ const webpackPath = path.join(__dirname, '../node_modules/.bin/webpack.cmd');
 
 try {
   // execSync(`"${tscPath}" --declaration --emitDeclarationOnly || true`, { stdio: 'inherit' });
-  execSync(`"${babelPath}" src --out-dir dist --copy-files --no-copy-ignored --extensions .ts --source-maps`, { stdio: 'inherit' });
+  // execSync(`"${babelPath}" src --out-dir dist --copy-files --no-copy-ignored --extensions .ts --source-maps`, { stdio: 'inherit' });
   execSync(`"${webpackPath}" --mode ${mode}`, { stdio: 'inherit' });
 } catch (error) {
   process.exit(1);
