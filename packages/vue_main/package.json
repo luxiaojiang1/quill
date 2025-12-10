@@ -13,6 +13,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@l_h5_tool/log": "catalog:",
     "@l_h5_tool/h5_shoelace_ui": "catalog:",
     "quill": "workspace:*",
     "vue": "catalog:"

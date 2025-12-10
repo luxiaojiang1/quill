@@ -1,5 +1,14 @@
 <script setup lang="ts">
+import { Log } from '@l_h5_tool/log'
 import EditorMain from './pages/editor/EditorMain.vue'
+
+Log.openAll()
+
+window.Log = Log
+const logger = Log.getLogger('APP')
+logger.log({
+  message: 'hello',
+})
 </script>
 
 <template>

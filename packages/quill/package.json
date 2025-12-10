@@ -28,6 +28,7 @@
     "quill-delta": "^5.1.0"
   },
   "devDependencies": {
+    "@l_h5_tool/log": "catalog:",
     "@babel/cli": "^7.23.9",
     "@babel/core": "^7.24.0",
     "@babel/preset-env": "^7.24.0",

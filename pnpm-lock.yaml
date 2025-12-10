@@ -12,6 +12,9 @@ catalogs:
     '@l_h5_tool/h5_shoelace_ui':
       specifier: ^0.0.2
       version: 0.0.2
+    '@l_h5_tool/log':
+      specifier: ^0.1.8
+      version: 0.1.8
     '@l_h5_tool/stylelint-config':
       specifier: ^0.0.3
       version: 0.0.3
@@ -71,6 +74,9 @@ importers:
       '@arethetypeswrong/cli':
         specifier: ^0.15.1
         version: 0.15.4
+      '@l_h5_tool/log':
+        specifier: 'catalog:'
+        version: 0.1.8
       '@microsoft/api-extractor':
         specifier: ^7.42.3
         version: 7.55.2(@types/node@18.19.130)
@@ -147,6 +153,9 @@ importers:
       '@babel/preset-typescript':
         specifier: ^7.23.3
         version: 7.28.5(@babel/core@7.28.5)
+      '@l_h5_tool/log':
+        specifier: 'catalog:'
+        version: 0.1.8
       '@playwright/test':
         specifier: 1.44.1
         version: 1.44.1
@@ -276,6 +285,9 @@ importers:
       '@l_h5_tool/h5_shoelace_ui':
         specifier: 'catalog:'
         version: 0.0.2(@floating-ui/utils@0.2.10)(@types/react@19.2.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vue@3.5.25(typescript@5.9.3))
+      '@l_h5_tool/log':
+        specifier: 'catalog:'
+        version: 0.1.8
       quill:
         specifier: workspace:*
         version: link:../quill
@@ -1362,6 +1374,9 @@ packages:
         optional: true
       vue:
         optional: true
+
+  '@l_h5_tool/log@0.1.8':
+    resolution: {integrity: sha512-ty4+Ue2QeewKBHSSkaXfeNeaO2xdUPXOmieK/yqJDM6lweCL0yGnGy92qwSF9qnb/i+18yLTs1Rq7nkjKbdf9g==}
 
   '@l_h5_tool/stylelint-config@0.0.3':
     resolution: {integrity: sha512-CFZf7DrVIqGFfPduviaTxFqiPRdAm2JspaTI9d5dwEjR4Xrdnut0cFDjDn7yUCMAdyCzueZ+1wE/Ebi3+m+++g==}
@@ -3642,6 +3657,9 @@ packages:
   execa@9.0.2:
     resolution: {integrity: sha512-oO281GF7ksH/Ogv1xyDf1prvFta/6/XkGKxRUvA3IB2MU1rCJGlFs86HRZhdooow1ISkR0Np0rOxUCIJVw36Rg==}
     engines: {node: '>=18'}
+
+  expr-eval@2.0.2:
+    resolution: {integrity: sha512-4EMSHGOPSwAfBiibw3ndnP0AvjDWLsMvGOvWEZ2F96IGk0bIVdjQisOHxReSkE13mHcfbuCiXw+G4y0zv6N8Eg==}
 
   express@4.22.1:
     resolution: {integrity: sha512-F2X8g9P1X7uCPZMA3MVf9wcTqlyNp7IhH5qPCI0izhaOIYXaW9L535tGA3qmjRzpH+bZczqq7hVKxTR4NWnu+g==}
@@ -8137,6 +8155,10 @@ snapshots:
       - '@floating-ui/utils'
       - '@types/react'
 
+  '@l_h5_tool/log@0.1.8':
+    dependencies:
+      expr-eval: 2.0.2
+
   '@l_h5_tool/stylelint-config@0.0.3(typescript@5.9.3)':
     dependencies:
       postcss: 8.5.6
@@ -8909,7 +8931,7 @@ snapshots:
       '@vitest/utils': 1.6.1
       magic-string: 0.30.21
       sirv: 2.0.4
-      vitest: 1.6.1(@types/node@24.10.2)(@vitest/browser@1.6.1)(jsdom@22.1.0)(sass@1.95.1)(stylus@0.62.0)(terser@5.44.1)
+      vitest: 1.6.1(@types/node@20.19.26)(@vitest/browser@1.6.1)(jsdom@22.1.0)(sass@1.95.1)(stylus@0.62.0)(terser@5.44.1)
     optionalDependencies:
       playwright: 1.44.1
 
@@ -10918,6 +10940,8 @@ snapshots:
       signal-exit: 4.1.0
       strip-final-newline: 4.0.0
       yoctocolors: 2.0.0
+
+  expr-eval@2.0.2: {}
 
   express@4.22.1:
     dependencies:
@@ -14286,6 +14310,7 @@ snapshots:
       - sugarss
       - supports-color
       - terser
+    optional: true
 
   vite@5.4.21(@types/node@18.19.130)(sass@1.95.1)(stylus@0.62.0)(terser@5.44.1):
     dependencies:
@@ -14430,6 +14455,7 @@ snapshots:
       - sugarss
       - supports-color
       - terser
+    optional: true
 
   vscode-uri@3.1.0: {}
 
